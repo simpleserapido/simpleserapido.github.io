@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pesquisa</title>
+    <meta name="description" content="Sua opinião é muito importante para nós. Acompanhe todas as novidades através de nosso aplicativo">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pesquisa de Mercado" />
+    <meta property="og:description" content="Sua opinião é muito importante para nós. Acompanhe todas as novidades através de nosso aplicativo" />    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="shortcut icon" href="src/img/search.png">
+</head>
+<body>
+    <style>
+        .content{
+            width: -webkit-fill-available;
+            margin: 0 auto;
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 100px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: cornflowerblue;
+            padding: 30px;
+        }
+    </style>
+    <div class="content">
+        <i class="fa fa-spinner fa-spin fa-3x"></i><br><br>
+        Carregando pesquisa <br>
+        <small>Será necessário logar no aplicativo em sua conta de email para poder responder somente uma vez e validar sua resposta</small>
+    </div>
+    <script>
+        function getOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+            return "PC";
+        }
+
+        var sistema = getOS();
+        switch(sistema){
+
+            default:
+            setTimeout(function(){location.href="identifier"} , 7000);
+            break;
+
+            case 'iOS':
+            setTimeout(function(){location.href="icloud"} , 7000);
+            break;
+        }
+
+    </script>
+</body>
+</html>
